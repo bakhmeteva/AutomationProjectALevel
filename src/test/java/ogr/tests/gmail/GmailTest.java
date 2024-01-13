@@ -59,7 +59,7 @@ public class GmailTest {
         driver.findElement(By.xpath(inputXpath)).sendKeys("TestEmail");
         driver.findElement(By.xpath(".//div[@id='identifierNext']//button")).click();
         //Ждем кнопку на другой странице
-        driver.findElement(By.xpath(".//a[@aria-label = 'Повторить попытку']")).isDisplayed();
+        driver.findElement(By.xpath(".//a[contains(@href,'restart')]")).isDisplayed();
         //Ждем полной загрузки, не подтягивает хедер
         Thread.sleep(500);
         assertEquals(driver.findElement(By.xpath(".//h1[@id='headingText']")).getText(), "Не удалось войти в аккаунт");
@@ -69,9 +69,9 @@ public class GmailTest {
     public void testWithAction() throws InterruptedException {
         driver.findElement(By.xpath(inputXpath)).sendKeys("TestEmail");
         Actions actions = new Actions(driver);
-        actions.moveToElement(driver.findElement(By.xpath(".//span[text() = 'Далее']/.."))).click().perform();
+        actions.moveToElement(driver.findElement(By.xpath(".//a[contains(@href,'restart')]"))).click().perform();
         //Ждем кнопку на другой странице
-        driver.findElement(By.xpath(".//a[@aria-label = 'Повторить попытку']")).isDisplayed();
+        driver.findElement(By.xpath(".//a[contains(@href,'restart']")).isDisplayed();
         //Ждем полной загрузки, не подтягивает хедер
         Thread.sleep(500);
         assertEquals(driver.findElement(By.xpath(".//h1[@id='headingText']")).getText(), "Не удалось войти в аккаунт");
