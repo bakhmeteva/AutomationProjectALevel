@@ -57,7 +57,7 @@ public class GmailTest {
     @Test
     public void test3() throws InterruptedException {
         driver.findElement(By.xpath(inputXpath)).sendKeys("TestEmail");
-        driver.findElement(By.xpath(".//span[text() = 'Далее']/..")).click();
+        driver.findElement(By.xpath(".//div[@id='identifierNext']//button")).click();
         //Ждем кнопку на другой странице
         driver.findElement(By.xpath(".//a[@aria-label = 'Повторить попытку']")).isDisplayed();
         //Ждем полной загрузки, не подтягивает хедер
