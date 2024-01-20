@@ -58,6 +58,6 @@ public class SearchWithDataProvider {
         //Ждем инпут
         driver.findElement(By.xpath(".//td[@class = 'gsc-input']")).isDisplayed();
         List<WebElement> results = driver.findElements(By.xpath(searchResult));
-        assertTrue(results.get(0).getText().toLowerCase().contains(name), "Contains " + name );
+        assertTrue(results.get(0).getText().toLowerCase().contains(name), "Contains " + "name" );
     }
 }
