@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Test suite with test params">
+
+    <test name="globallogic">
+        <parameter name="name" value="globallogic"/>
+        <classes>
+            <class name="ogr.tests.dou.SearchTestWithXmlParams"/>
+        </classes>
+    </test>
+
+    <test name="sigma">
+        <parameter name="name" value="sigma"/>
+        <classes>
+            <class name="ogr.tests.dou.SearchTestWithXmlParams"/>
+        </classes>
+    </test>
+
+    <test name="dataProvider">
+        <classes>
+            <class name="ogr.tests.dou.SearchWithDataProvider"/>
+        </classes>
+    </test>
+
+</suite>
