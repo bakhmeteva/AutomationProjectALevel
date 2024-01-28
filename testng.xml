@@ -22,4 +22,17 @@
         </classes>
     </test>
 
+
+    <test name="HttpClient">
+        <classes>
+            <class name="ogr.tests.rest.HttpRest"/>
+        </classes>
+    </test>
+
+    <test name="RestAssured">
+        <classes>
+            <class name="ogr.tests.rest.RestAssuredTest"/>
+        </classes>
+    </test>
+
 </suite>
